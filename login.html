@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFuction(){
+            var un=document.forms["myForm"]["Uname"].value;
+            var pw=document.forms["myForm"]["Pass"].value;
+            if(un=="Thrinadh" && pw=="1234"){
+                window.location.href="index.html";
+            }else{
+                alert("Invalid User Name and Password");
+            }
+
+        }
+    </script>
+    <style>
+        body{
+            background-color: violet;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        form{
+            width: 300px;
+            
+            margin: auto;
+            margin: 10 0 0 450px;
+            overflow: hidden;
+            padding: 75px;
+            background: rgb(128, 84, 159);
+
+        }
+        
+        h1{
+            text-align: center;
+            padding: 10px;
+            color: grey;
+        }
+        label{
+            color: white;
+            padding-left: 10px;
+        }
+        .inputText{
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 2px;
+            padding-left: 8px;
+        }
+        #logButton{
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: black;
+            font-size: 16px;
+        }
+        @media only screen and (max-width:800px){
+            form{
+                float: right;
+                text-align: center;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <h1>Login</h1>
+    <div class="div1 center";>
+        <form name="myForm" method="post" class="center">
+            <label>User Name</label>
+            <input type="text" name="Uname" class="inputText" placeholder="User Name"><br><br>
+            <label>Password</label>
+            <input type="password" name="Pass" class="inputText" placeholder="Password"><br><br>
+            <input type="button" name="log" id="logButton" value="Login" onclick="myFuction()"><br><br>
+        </form>
+
+    
+    </div>
+</body>
+</html>
