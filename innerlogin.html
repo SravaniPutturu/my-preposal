@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function myFuction(){
+            var un=document.forms["myForm"]["Uname"].value;
+            if(un=="SravaniPutturu"){
+                window.location.href="http://127.0.0.1:5501/letter.html";
+            }else{
+                alert("Invalid User Name");
+            }
+
+        }
+    </script>
+    <style>
+        
+        body{
+
+           height: 100%;
+            overflow: hidden;
+            
+        }
+        .bg{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            height: 100%;
+            background-image: url("bg1.jpg");
+        }
+        input{
+            background: red;
+            width: 300px;
+            height: 40px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 500;
+            margin: 25px;
+            border: none;
+        }
+        .forms{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 150px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <form name="myForm" method="post" class="forms">
+        <input type="text" name="Uname" placeholder="HER FULL NAME.....!">
+
+        <input type="button" value="Login" onclick="myFuction()">
+
+       
+
+    </form>
+</body>
+</html>
+<!-- <form name="myForm" method="post">
+            <label>User Name</label>
+            <input type="text" name="Uname" class="inputText" placeholder="User Name"><br><br>
+            <label>Password</label>
+            <input type="password" name="Pass" class="inputText" placeholder="Password"><br><br>
+            <input type="button" name="log" id="logButton" value="Login" onclick="myFuction()"><br><br>
+        </form> -->
